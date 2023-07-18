@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from kryptoinu.finance/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2023 08:11:46 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bumblebee</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+
+    <script src="js/wow.min.js"></script>
+    <script>
+      // ===== wow js
+      new WOW().init();
+    </script>
+    <script defer src="js/alpine.min.js"></script>
+  </head>
+  <body
+    class="a0"
+    x-data="
+      {
+        scrolledFromTop: false
+      }
+    "
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+  >
+    <div class="preload">
+      <img class="loaderimg" src="images/loadscreenmascot.png" alt="mascot" />
+      <div class="waviy">
+        <span style="--i: 1">w</span>
+        <span style="--i: 2">e</span>
+        <span style="--i: 3">l</span>
+        <span style="--i: 4">c</span>
+        <span style="--i: 5">o</span>
+        <span style="--i: 6">m</span>
+        <span style="--i: 7">e</span>
+        <span style="--i: 8">!</span>
+      </div>
+    </div>
+
+    <header
+      x-data="
+        {
+          navbarOpen: false,
+          submenuOpen: false
+        }
+      "
+      class="header a1 a2 a3 a4 a5 a6 a7 a8"
+      :class="scrolledFromTop ? 'a9 aa ab ac ad' : ' a9' "
+    >
+      <div class="ae">
+        <div class="af ag[-16px] a3 a5 ah">
+          <div class="ai aj ak">
+            <a
+              href="index-2.html"
+              class="header-logo al a4"
+              :class="scrolledFromTop ? 'am lg:an' : 'ao lg:ap' "
+            >
+              <img src="images/logo.png" alt="logo" class="aq22 aj2" />
+            </a>
+          </div>
+          <div class="a3 a4 a5 ah ak">
+            <div>
+              <button
+                @click="navbarOpen = !navbarOpen "
+                :class="navbarOpen && 'navbarTogglerActive' "
+                id="navbarToggler"
+                name="navbarToggler"
+                aria-label="navbarToggler"
+                class="ar as at/2 al au[-50%] av aw ax[6px] ay focus:az lg:aA"
+              >
+                <span
+                  :class="navbarOpen && 'aB aC aD[7px]' "
+                  class="af aE[6px] al aF[2px] aG[30px] aH"
+                ></span>
+                <span
+                  :class="navbarOpen && 'aI' "
+                  class="af aE[6px] al aF[2px] aG[30px] aH"
+                ></span>
+                <span
+                  :class="navbarOpen && 'aD[-8px] aJ[135deg]' "
+                  class="af aE[6px] al aF[2px] aG[30px] aH"
+                ></span>
+              </button>
+              <nav
+                :class="!navbarOpen && 'aA' "
+                id="navbarCollapse"
+                class="ar as aK a4 aL[250px] av aM aN lg:aO lg:al lg:a4 lg:aj lg:a6 aP lg:aQ lg:ak lg:aR xl:aS"
+              >
+                <ul class="aT lg:a3">
+                  <li class="aU af">
+                    <a
+                      href="index-2.html"
+                      class="aV a3 an aW aX aZ group-hover:aZ lg:a_ lg:a10 lg:a11 lg:a12"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li class="aU af">
+                    <a
+                      href="#features2"
+                      class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14"
+                    >
+                      Features
+                    </a>
+                  </li>
+                  <li class="aU af">
+                    <a
+                      href="#lore"
+                      
+                      class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14"
+                    >
+                      Lore
+                    </a>
+                  </li>
+                  <li class="aU af">
+                    <a
+                      href="#htb"
+                      
+                      class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14"
+                    >
+                      How to Buy
+                    </a>
+                  </li>
+                  <li class="aU af">
+                    <a
+                      href="#token"
+                      
+                      class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14"
+                    >
+                      Tokenomics
+                    </a>
+                  </li>
+                  <li class="aU af">
+                    <a
+                      href="#rm"
+                     
+                      class="aV a3 an aW aX aY[#bababa] group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a12 xl:a14"
+                    >
+                      Roadmap
+                    </a>
+                  </li>
+                  <li class="aU submenu-item af">
+                    <a
+                      href="javascript:void(0)"
+                      @click="submenuOpen = !submenuOpen"
+                      class="af aV a3 an aW aX aY[#bababa] after:ar after:a15 after:at/2 after:a16[-2px] after:a17 after:a18 after:au[-50%] after:aC after:a19 after:a1a after:a1b group-hover:aZ lg:a_ lg:a13 lg:a10 lg:a11 lg:a1c lg:a1d lg:after:a1e xl:a14"
+                    >
+                      Links
+                    </a>
+                    <div
+                      :class="submenuOpen ? 'al' : 'aA' "
+                      class="submenu af aK a2 aG[250px] a1f aa a1g a1h[top] a1i group-hover:a1j lg:a1k lg:ar lg:aD[110%] lg:al lg:aI lg:aN lg:group-hover:a1l lg:group-hover:aK"
+                    >
+                      <a
+                        href="https://t.me/OPbumblebeee"
+                        target="_blank"
+                        class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ"
+                      >
+                        Telegram
+                      </a>
+                      <a
+                        href="https://twitter.com/OPbumblebee"
+                        target="_blank"
+                        class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ"
+                      >
+                        Twitter
+                      </a>
+                      <a
+                        href="https://discord.gg/7PhgMEVx"
+                        target="_blank"
+                        class="al a1m ax[10px] ak a1n a1o aY[#bababa] hover:aZ"
+                      >
+                        Discord
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section
+      id="home"
+      class="af a2o a2p a38 a39 a3a a1E[150px] a1F"
+      style="background-image: url('images/hero/common-bg.png')"
+    >
+      <div
+        class="ar a2 a1 a3b a30 a4"
+        style="
+          background: linear-gradient(
+            180deg,
+            rgba(20, 20, 32, 0.35) 0%,
+            #141420 100%
+          );
+        "
+      ></div>
+      <div class="ae">
+        <div class="a1R a3 a1S a5">
+          <div class="a4 ak lg:a1T/2">
+            <div class="a2w aL[570px] lg:a2x">
+              <!-- <img src="images/logo2.png" alt="" /> -->
+              <h1
+                class="a1M aY[40px] a1O2 a1P aZ md:aY[50px] lg:aY[40px] xl:aY[46px] 2xl:aY[50px] sm:text-[46px]"
+              >
+                Your <span><b>Bumblebee</b></span>
+                In Crypto
+              </h1>
+              <p class="a2e a1Q a1o a3c a1t md:a3d">
+               Where memes and crypto collide! Join the buzz and collect digital assets featuring the adorable and mischievous Bumblebee. Get ready for a hive of laughter, community camaraderie, and sweet rewards for our busy little investors. It's time to bee-lieve in the power of laughter and crypto with Bumblebee Crypto Meme!"
+              </p>
+              <div class="flex flex-wrap items-center">
+                <a
+                  href="#htb"
+                  class="a1Y a10 a5 a1Z a1f a1y a1z aP a1s aW aX aZ a1w hover:a1B hover:a1C"
+                >
+                  How to Buy
+                </a>
+
+                <a
+                href="https://t.me/OPbumblebeee"
+                target="_blank"
+                class="a2c a1Y a10 a5 a1Z a1f a1y a1B a1C aP a1s aW aX aZ a1w hover:a36"
+              >
+                Telegram
+              </a>
+              <a
+                  href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=" target="_blank"
+                  class="a1Y a10 a5 a1Z a1f a1y a1z aP a1s aW aX aZ a1w hover:a1B hover:a1C"
+                >
+                  Buy Now
+                </a>
+                <p class="a2e a1Q a1o a3c a1t md:a3d">
+                CA: Contract here
+              </p>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="a4 ak lg:a1T/2">
+            <div class="a1L">
+              <img
+                src="images/hero/hero-image.png"
+                alt="Bumblebee Mascot"
+                class="a1J aj"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="a1E[90px]">
+      <div class="ae" id="features2">
+        <div class="a1J a1K a1L">
+          <h2 class="a1M a1N a1O a1P aZ sm:aY[42px]">Core Features</h2>
+          <p class="a1Q a1o a1t">
+             </p>
+        </div>
+        <div class="a1R a3 a1S">
+          <div class="a4 ak2 md:a1T/2 lg:a1T/3 2xl:a1T/4">
+            <div class="aU a1U a1V a1W a1G aM a1X22 a1w hover:a1z hover:aH">
+              <div class="a1Y a3 aF[72px] aG[72px] a5 a1Z a1_">
+                <img src="images/icon1.png" alt="" />
+              </div>
+              <h3 class="a21 a22 a1O aZ a7 group-hover:a23">Instant Rewards</h3>
+              <p class="aW a1o a1t">
+                For every single transaction made within the network and with
+                the use of Bumblebee, a transaction fee is distributed to all
+                existing holders. <br /><br />
+                This means your balance will continuously grow by holding!
+              </p>
+            </div>
+          </div>
+          <div class="a4 ak2 md:a1T/2 lg:a1T/3 2xl:a1T/4">
+            <div class="aU a1U a1V a1W a1G aM a1X22 a1w hover:a1z hover:aH">
+              <div class="a1Y a3 aF[72px] aG[72px] a5 a1Z a1_">
+                <img src="images/icon4.png" alt="" />
+              </div>
+              <h3 class="a21 a22 a1O aZ a7 group-hover:a23">
+                Community Powered
+              </h3>
+              <p class="aW a1o a1t">
+                Bumblebee is fully decentralized and owned by its great,
+                vibrant community. We welcome and embrace diverse perspectives
+                to build Bumblebee into the best community in Crypto.
+                <br /><br />
+                <i
+                  >"Patience is not the ability to wait, but the ability to keep
+                  a good attitude while waiting."</i
+                >
+                <br /><br />
+                Become part of our Krypto family!
+              </p>
+            </div>
+          </div>
+          <div class="a4 ak2 md:a1T/2 lg:a1T/3 2xl:a1T/4">
+            <div class="aU a1U a1V a1W a1G aM a1X22 a1w hover:a1z hover:aH">
+              <div class="a1Y a3 aF[72px] aG[72px] a5 a1Z a1_">
+                <img src="images/icon3.png" alt="" />
+              </div>
+              <h3 class="a21 a22 a1O aZ a7 group-hover:a23">Safe & Secure</h3>
+              <p class="aW a1o a1t">
+                Bumblebee strives for the best security for our holders. Upon
+                launch we will start the process off with a Certik Audit.
+                <br /><br />
+                In the vastly moving crypto space we believe in taking care off
+                each other and protecting our Bumblebee Family for various
+                scams and fake links. Always stick to official links and double
+                check before connecting or joining anything.
+              </p>
+            </div>
+          </div>
+          <div class="a4 ak2 md:a1T/2 lg:a1T/3 2xl:a1T/4">
+            <div class="aU a1U a1V a1W a1G aM a1X22 a1w hover:a1z hover:aH">
+              <div class="a1Y a3 aF[72px] aG[72px] a5 a1Z a1_">
+                <img src="images/icon2.png" alt="" />
+              </div>
+              <h3 class="a21 a22 a1O aZ a7 group-hover:a23">Earning Power</h3>
+              <p class="aW a1o a1t">
+                Bumblebee will release various ways, in both defi and
+                centralized to holders to generate more income with their Krypto
+                Inu Tokens. <br /><br />
+                With staking, NFT's, and many more features which we will be
+                announcing on our socials and in the Telegram community
+                family.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bumblebee Lore  -->
+    <section id="features" class="a1E[90px]">
+      <div class="ae" id="lore">
+        <div class="a1J a1K a1L">
+          <h2 class="a1M a1N a1O a1P aZ sm:aY[42px]">Bumblebee Lore</h2>
+          <p class="a1Q a1o a1t">
+             </p>
+        </div>
+        <div class="a1R a3 a1S">
+          <div class="a4 ak md:a1T/2 lg:a1T/2">
+            <div class="aU a1U a1V a1W a1G aM a1X a1w">
+              <h3 class="a21 a22 a1O aZ a7">Bumblebee's Story</h3>
+              <p class="aW a1o a1t">
+                Bumblebee is one of Optimus Prime's most trusted lieutenants. Although he's not the strongest or most powerful of the Autobots, Bumblebee more than makes up for this with a bottomless well of luck, determination and bravery. He would gladly give his life to protect others and stop the Decepticons.
+              </p>
+            </div>
+          </div>
+          <div class="a4 ak md:a1T/2 lg:a1T/2">
+            <div class="aU a1U a1V a1W a1G aM mascot2 a1X a1w">
+              <img src="images/mascot2.png" alt="" class="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bumblebee How to Buy -->
+
+    <section id="features" class="a1E[90px]">
+      <div class="ae">
+        <div class="a1J a1K a1L">
+          <h2 class="a1M a1N a1O a1P aZ sm:aY[42px]">How to Buy</h2>
+          <p class="a1Q a1o a1t">
+              You can buy Bumblebee through <a href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x37c05574be399a592fe275811f959f2da0bec2d7" target="_blank"><u>this</u></a> link
+             </p>
+        </div>
+
+        <div class="htb" id="htb">
+          <h3 class="a21 a22 a1O aZ a7">
+            <img src="images/step1htb.png" alt="" />
+            Create MetaMask wallet
+          </h3>
+          <p class="aW a1o a1t">
+            Create a MetaMask Wallet using either a desktop computer or an
+            iOS/Android mobile device. That will allow you to buy, sell, send,
+            and receive Bumblebee Tokens.
+          </p>
+          <h3 class="a21 a22 a1O aZ a7">
+            <img src="images/step2htb.png" alt="" />
+            Send ETH to your wallet
+          </h3>
+          <p class="aW a1o a1t">
+            You can buy Ethereum (ETH) directly on MetaMask or transfer it to
+            your MetaMask Wallet from exchanges like Coinbase, Binance, etc.
+            Make sure to use the ERC-20 network when transfering ETH.
+          </p>
+          <h3 class="a21 a22 a1O aZ a7">
+            <img src="images/step3htb.png" alt="" />
+            Visit Bumblebee Exchange Page
+          </h3>
+          <p class="aW a1o a1t">
+            As of now, you can purchase Bumblebee through UniSwap, Bumblebee’s
+            official decentralized exchange where you can swap any ERC-20 Token.
+          </p>
+          <h3 class="a21 a22 a1O aZ a7">
+            <img src="images/step4htb.png" alt="" />
+            Swap ETH for Bumblebee
+          </h3>
+          <p class="aW a1o a1t">
+            You can start swapping as soon as you have ETH available! Press
+            ‘Select a token’ and enter the token address or search for it on the
+            tokens list.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="a1E[90px]">
+      <div class="ae" id="token">
+        <div class="a1J a1K a1L">
+          <h2 class="a1M a1N a1O a1P aZ sm:aY[42px]">Tokenomics</h2>
+          <p class="a1Q a1o a1t">
+             </p>
+        </div>
+        <div class="a1R a3 a1S">
+          <div class="a4 ak md:a1T/2 lg:a1T/2">
+            <div class="aU a1U a1V a1W a1G aM a1X a1w">
+              <h3 class="a21 a22 a1O aZ a7">Bumblebee Tokenomics</h3>
+              <p class="aW a1o a1t">
+                Symbol: $BUMBEE <br />
+                Supply: 6,666,666,666
+              </p>
+            </div>
+          </div>
+          <div class="a4 ak md:a1T/2 lg:a1T/2">
+            <div class="aU a1U a1V a1W a1G token a1X a1w">
+              <img src="images/tokenomics.png" alt="" class="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="a1E[90px]">
+      <div class="ae" id="rm">
+        <div class="a1J a1K a1L">
+          <h2 class="a1M a1N a1O a1P aZ sm:aY[42px]">Roadmap</h2>
+          <p class="a1Q a1o a1t">
+             </p>
+        </div>
+
+        <div class="htb2">
+          <div class="container">
+	
+            <div class="timeline-item" date-is='Pre Launch'>
+
+              <p>
+                • Socials Marketing Campaign <br>
+                • IRL Marketing <br>
+                • Member growth<br>
+                • Member tasks & Giveaways<br>
+                • Pre-launch Calls
+              </p>
+            </div>
+            
+            <div class="timeline-item" date-is='Launch'>
+             
+              <p>
+                • Continuation off IRL & Online Marketing <br>
+                • Coingecko Listing <br>
+                • Coinmarketcap Listing <br>
+                • Trending <br>
+                • Calls <br>
+                • Certik Audit Onboarding <br>
+                • TW Master Wallet Update
+              </p>
+            </div>
+            
+            <div class="timeline-item" date-is='After launch ( 1 week )'>
+              <p>
+                • First CEX Listing <br>
+                • NFT First look<br>
+                • Token Staking on customized Platform<br>
+                • Growth on all platforms<br>
+                • Certik Audit + Leaderboard<br>
+                • More Marketing <br>
+                • More trendings
+              </p>
+            </div>
+            <div class="timeline-item" date-is='Phase 4'>
+              <p>
+                • NFT Airdrop to Holders<br>
+                • NFT & Token Marketing<br>
+                • NFT + Token Staking based on Rarity<br>
+                • More T1 CEX listings<br>
+                • Continuation off Marketing Online & IRL<br>
+                • Major calls<br>
+                • Trending everywhere
+              </p>
+            </div>
+            
+          </div>
+      </div>
+    </section>
+
+    <footer class="aM a24">
+      <div class="ae">
+        <div class="a1R a3 a1S">
+          <div class="a4 ak sm:a25/12 lg:a26/12 xl:a27/12">
+            <div class="a28">
+              <div class="aL[300px]">
+                <a href="index-2.html" class="a29 a2a">
+                  <img src="images/logo.png" alt="logo" class="aq" />
+                </a>
+                <p class="a2b aW a1o a1t">
+                  Uniquely made with the founders CloneX #18745 from RTFKT Studios. Bumblebee strives to build a valued and thriving community of holders united behind our vision.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="a4 ak sm:a25/12 lg:a26/12 xl:a26/12">
+            <div class="a28">
+              <h2 class="a2e a2f a1O aZ">Bumblebee</h2>
+              <ul>
+                <li>
+                  <a
+                    href="#features2"
+                    class="a1M a2a aW a1o a1t a7 hover:aZ"
+                  >
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#htb"
+                    class="a1M a2a aW a1o a1t a7 hover:aZ"
+                  >
+                    How to Buy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#token"
+                    class="a1M a2a aW a1o a1t a7 hover:aZ"
+                  >
+                    Tokenomics
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#rm"
+                    class="a1M a2a aW a1o a1t a7 hover:aZ"
+                  >
+                    Roadmap
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="a4 ak sm:a25/12 lg:a26/12 xl:a18/12">
+            <div class="a28">
+              <h2 class="a2e a2f a1O aZ">Useful Links</h2>
+              <ul>
+                <li>
+                  <a
+                    href="KryptoInuWhitepaper.pdf"
+                    target="_blank"
+                    class="a1M a2a aW a1o a1t a7 hover:aZ"
+                  >
+                    Whitepaper
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://t.me/OPbumblebeee"
+                    target="_blank"
+                    class="a1M a2a aW a1o a1t a7 hover:aZ"
+                  >
+                    Telegram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/OPbumblebee`"
+                    target="_blank"
+                    class="a1M a2a aW a1o a1t a7 hover:aZ"
+                  >
+                    Twitter
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+        <div class="a2n a1G">
+          <div class="ap a1L">
+            <p class="aW a1o a1t">
+              &copy; Copyright 2023 - Bumblebee. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/tiny-slider.js"></script>
+    
+    <script>
+      window.addEventListener("load", () => {
+        const preload = document.querySelector(".preload");
+        preload.classList.add("preload-finish");
+      });
+    </script>
+  </body>
+
+<!-- Mirrored from kryptoinu.finance/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Jul 2023 08:11:56 GMT -->
+</html>
